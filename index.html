@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Quote Generator</title>
+</head>
+
+<body>
+  <div class="container">
+  <button id="btn">Click For New Quotes</button>
+  </div>
+  <div id="quote">Check generated Quote here</div>
+</body>
+
+<script>
+let btn=document.getElementById("btn");
+let output=document.getElementById("quote")
+let quotes = [
+`How long you are able to be in the present moment will determine how happy you are, how peaceful you are or how fearful you are in your life.` ,
+
+`In three words I can sum up everything I've learned about life: it goes on. 
+― Robert Frost` ,
+
+`There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.
+― Albert Einstein`,
+
+`Life is what happens to us while we are making other plans.
+― Allen Saunders`,
+
+`It is better to be hated for what you are than to be loved for what you are not.
+― Andre Gide, Autumn Leaves`,
+
+`Good friends, good books, and a sleepy conscience: this is the ideal life.
+― Mark Twain`,
+];
+ 
+btn.addEventListener('click',function(){
+  var Quote=quotes[Math.floor(Math.random()*quotes.length)];
+  output.innerHTML=Quote;
+})
+</script>
+
+</html>
